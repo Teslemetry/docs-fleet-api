@@ -2947,6 +2947,7 @@ Parameters
    </span><span class="nl">"display_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Owned"</span><span class="p">,</span><span class="w">
    </span><span class="nl">"option_codes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TEST0,COUS"</span><span class="p">,</span><span class="w">
    </span><span class="nl">"cached_data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"mobile_access_disabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
    </span><span class="nl">"granular_access"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"hide_private"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
    </span><span class="p">},</span><span class="w">
