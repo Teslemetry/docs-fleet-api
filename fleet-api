@@ -422,7 +422,7 @@
                     <a href="#setup" class="toc-h2 toc-link" data-title="Setup">Setup</a>
                   </li>
                   <li>
-                    <a href="#endpoints-and-regional-requirements" class="toc-h2 toc-link" data-title="Endpoints and Regional requirements">Endpoints and Regional requirements</a>
+                    <a href="#endpoints-and-regional-requirements" class="toc-h2 toc-link" data-title="Endpoints and Regional Requirements">Endpoints and Regional Requirements</a>
                   </li>
                   <li>
                     <a href="#api-best-practices" class="toc-h2 toc-link" data-title="API Best Practices">API Best Practices</a>
@@ -448,10 +448,13 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#partner-authentication-token" class="toc-h2 toc-link" data-title="Partner authentication token">Partner authentication token</a>
+                    <a href="#partner-authentication-token" class="toc-h2 toc-link" data-title="Partner Authentication Token">Partner Authentication Token</a>
                   </li>
                   <li>
-                    <a href="#third-party-token" class="toc-h2 toc-link" data-title="Third-party token">Third-party token</a>
+                    <a href="#third-party-token" class="toc-h2 toc-link" data-title="Third-party Token">Third-party Token</a>
+                  </li>
+                  <li>
+                    <a href="#open-source-token" class="toc-h2 toc-link" data-title="Open-source Token">Open-source Token</a>
                   </li>
                   <li>
                     <a href="#authorization-scopes" class="toc-h2 toc-link" data-title="Authorization Scopes">Authorization Scopes</a>
@@ -834,6 +837,9 @@
             <a href="#announcements-amp-api-changelog" class="toc-h1 toc-link" data-title="Announcements &amp; API Changelog">Announcements &amp; API Changelog</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#2024-07-08-open-source-support" class="toc-h2 toc-link" data-title="2024-07-08: Open-source Support">2024-07-08: Open-source Support</a>
+                  </li>
+                  <li>
                     <a href="#2024-05-20-application-scope-updates" class="toc-h2 toc-link" data-title="2024-05-20: Application scope updates">2024-05-20: Application scope updates</a>
                   </li>
                   <li>
@@ -880,13 +886,10 @@ Partners can interact with their own devices, or devices for which they have bee
 <br /></p>
 <h2 id='setup'>Setup</h2>
 <ol>
-  <li>Set up a third-party account at <a target="_blank" href="https://developer.tesla.com">https://developer.tesla.com</a>.</li>
+  <li>Set up a third-party or open-source account at <a target="_blank" href="https://developer.tesla.com">https://developer.tesla.com</a>.</li>
   <ul>
     <li>In the "Client Details" step, it is recommended to select "Authorization Code and Machine-to-Machine" for most use cases. "Machine-to-Machine" (M2M) should only be selected for business accounts that own vehicles.</li>
-    <li>Note that account creation requests can be automatically rejected for these common reasons:</li>
-    <ul>
-      <li>Domain name is invalid</li>
-      <li>Application name already exists</li>
+    <li>Note that account creation requests can be automatically rejected if the Application name already exists.
     </ul>
   </ul>
   <li>Complete registration of an account:
@@ -903,7 +906,7 @@ Partners can interact with their own devices, or devices for which they have bee
 <p>Refer to the <a href="#help-and-support">help section</a> if facing any problems with registration flows or the API.
 <br />
 <br /></p>
-<h2 id='endpoints-and-regional-requirements'>Endpoints and Regional requirements</h2>
+<h2 id='endpoints-and-regional-requirements'>Endpoints and Regional Requirements</h2>
 <p>FleetAPI is available regionally. Use the appropriate <a href="#region">region</a> for each user.</p>
 
 <ul>
@@ -931,7 +934,7 @@ Partners can interact with their own devices, or devices for which they have bee
 <p>Fleet API is localized in multiple regions in accordance with local regulation (CCPA, GDPR, PIPL, etc.). The API may return some errors to guide developers, but it is the developers responsibility to comply with security, data privacy, data transfer, and data governance regulations.</p>
 <h3 id='secure-private-keys-and-secrets-at-all-time'>Secure private keys and secrets at all time</h3>
 <p>Follow best security practices when manipulating private keys and secrets. Modern cloud providers offer key management services (such as AWS Key Management Service, Azure Key Vault, and Google Cloud Key Management Service) or hardware security module (HSM) solutions to create and manage private keys &amp; secrets securely. It is important to not extract or transmit private keys over the network, particularly if they are not encrypted.</p>
-<h3 id='validate-vehicle-state-after-timeout-errors'>Validate Vehicle state after timeout errors</h3>
+<h3 id='validate-vehicle-state-after-timeout-errors'>Validate vehicle state after timeout errors</h3>
 <p>Timeouts can happen before or after a command is sent and executed in a vehicle, making it difficult to determine the vehicle&#39;s state when a timeout occurs. It is the developer&#39;s responsibility to ensure the vehicle is in the desired state. Most FleetAPI commands are stateful and can be safely retried, but some commands (such as honk_horn and media_next_track) may result in duplicated actions. Therefore, developers should exercise caution when retrying these commands to avoid unintended consequences.</p>
 <h2 id='membership-levels'>Membership Levels</h2>
 <p>These are the currently active membership levels to access Tesla&#39;s Fleet API.</p>
@@ -1046,7 +1049,7 @@ The response body is typically JSON-encoded with details in the &quot;error&quot
 <td>The record was created successfully.</td>
 </tr>
 </tbody></table>
-<h3 id='client-errors'>Client errors</h3>
+<h3 id='client-errors'>Client Errors</h3>
 <table><thead>
 <tr>
 <th>Status Code</th>
@@ -1210,7 +1213,7 @@ The response body is typically JSON-encoded with details in the &quot;error&quot
 <td>Client has closed the request before the server could send a response.</td>
 </tr>
 </tbody></table>
-<h3 id='server-errors'>Server errors</h3>
+<h3 id='server-errors'>Server Errors</h3>
 <table><thead>
 <tr>
 <th>Status Code</th>
@@ -1234,7 +1237,7 @@ The response body is typically JSON-encoded with details in the &quot;error&quot
 <td>Server did not receive a response.</td>
 </tr>
 </tbody></table>
-<h3 id='device-errors'>Device errors</h3>
+<h3 id='device-errors'>Device Errors</h3>
 <table><thead>
 <tr>
 <th>Status Code</th>
@@ -1264,10 +1267,11 @@ The response body is typically JSON-encoded with details in the &quot;error&quot
 <br />
 <br /></p>
 <h1 id='authentication'>Authentication</h1>
-<p>API endpoints require an authentication token.  There are two types of tokens:
+<p>API endpoints require an authentication token.  There are three types of tokens:
 <ol>
   <li>Partner authentication token - The subject of this token will be an application or business account ID, and will be generated using the <code>client_credentials</code> grant type. This can be used for calls related to modifying an application like <a href="#register">register</a>, or for accessing business-owned devices.</li>
   <li>Third-party token - The subject of this token will be the ID of a customer&#39;s account, and will be generated using the <code>authorization_code</code> grant type. This token is generated by a third-party application on behalf of a customer, and can be used for most endpoints.</li>
+  <li>Open-source token - Open-source applications are for developers that want to make contributions to FleetAPI open-source projects. Open-source tokens are effectively third-party tokens that are limited to the discovery tier and are generated without a client secret, and instead use <code>code_verifier</code> and <code>code_challenge</code>.</li>
 </ol></p>
 
 <p>The OAuth server&#39;s metadata file can be found at: <a href="https://auth.tesla.com/oauth2/v3/thirdparty/.well-known/openid-configuration">https://auth.tesla.com/oauth2/v3/thirdparty/.well-known/openid-configuration</a>.
@@ -1276,7 +1280,7 @@ The response body is typically JSON-encoded with details in the &quot;error&quot
 A Postman collection with these requests can be found <a href="https://www.postman.com/crimson-space-512892/workspace/fleet-api/collection/33220881-5d29d2ee-0aad-494c-b469-c2d510125f5b">here</a>.
 <br/>
 <br/></p>
-<h2 id='partner-authentication-token'>Partner authentication token</h2>
+<h2 id='partner-authentication-token'>Partner Authentication Token</h2>
 <p><span class="endpoint">
 <code>POST https://auth.tesla.com/oauth2/v3/token</code>
 </span></p>
@@ -1338,11 +1342,12 @@ curl <span class="nt">--request</span> POST <span class="se">\</span>
   <span class="nt">--data-urlencode</span> <span class="s1">'scope=openid vehicle_device_data vehicle_cmds vehicle_charging_cmds'</span> <span class="se">\</span>
   <span class="nt">--data-urlencode</span> <span class="s2">"audience=</span><span class="nv">$AUDIENCE</span><span class="s2">"</span> <span class="se">\</span>
   <span class="s1">'https://auth.tesla.com/oauth2/v3/token'</span>
-</code></pre></div><h2 id='third-party-token'>Third-party token</h2>
+</code></pre></div><h2 id='third-party-token'>Third-party Token</h2>
 <p>Use the <code>authorization_code</code> grant flow to generate a token on behalf of a customer. This allows API calls using the <a href="#authorization-scopes">scopes</a> granted by the customer.</p>
 
 <p><br />
-1. To initiate the authorization code flow direct the customer to an <code>/authorize</code> request.</p>
+1. 
+To initiate the authorization code flow direct the customer to an <code>/authorize</code> request.</p>
 <div class="highlight"><pre class="highlight plaintext"><code>https://auth.tesla.com/oauth2/v3/authorize?&amp;client_id=$CLIENT_ID&amp;locale=en-US&amp;prompt=login&amp;redirect_uri=$REDIRECT_URI&amp;response_type=code&amp;scope=openid%20vehicle_device_data%20offline_access&amp;state=$STATE
 </code></pre></div>
 <p><span class="endpoint">
@@ -1450,12 +1455,6 @@ Parameters
 <td>Partner application client secret.</td>
 </tr>
 <tr>
-<td>code</td>
-<td>Yes</td>
-<td>a90869e9d...</td>
-<td>Code from authorize request callback.</td>
-</tr>
-<tr>
 <td>audience</td>
 <td>Yes</td>
 <td>https://fleet-api.prd.na.vn.cloud.tesla.com</td>
@@ -1522,6 +1521,212 @@ Parameters
 </tbody></table>
 
 <p>5. Once a user has granted scopes to an application, they can modify scopes or revoke access using the consent management page:</p>
+
+<p><span class="endpoint">
+<code>https://auth.tesla.com/user/revoke/consent?revoke_client_id=$CLIENT_ID&amp;back_url=$RETURN_URL</code>
+</span></p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code>https://auth.tesla.com/user/revoke/consent?revoke_client_id<span class="o">=</span>cb30fbdf81e9-4405-ba59-ddbc042277e8&amp;back_url<span class="o">=</span>https://accounts.tesla.com/account-settings/security?tab<span class="o">=</span>tpty-apps
+</code></pre></div>
+<p>Scope modifications are compatible with existing refresh tokens and will be applied to new access tokens.</p>
+
+<p><br />
+<br /></p>
+<h2 id='open-source-token'>Open-source Token</h2>
+<p>Developers working on open-source projects or projects that require publicly available credentials, can onboard their Tesla application as an &quot;Open Source App&quot;. This will enable the PKCE flow using a client ID without client secret. Open Source Apps are restricted to the <a href="#membership-levels">discovery tier</a> and cannot generate or access APIs that require client credentials tokens (<a href="#partner-authentication-token">Partner Authentication Token</a>).</p>
+
+<p>Similar to third-party tokens, open-source tokens use the <code>authorization_code</code> grant flow to generate a token on behalf of a customer. This allows API calls using the <a href="#authorization-scopes">scopes</a> granted by the customer.</p>
+
+<p><br />
+1. 
+For the open-source token authorize request, a PKCE-enhanced Authorization Code flow is required. To use PKCE-enhanced Authorization Code flow, an app generates a code verifier and derives a code challenge from it. The challenge is sent with the authorization code request, and the verifier is sent with the access token request. The authorization server verifies the requests by recalculating the challenge and matching it with the original.
+More instructions on generating <code>code_challenge</code> and <code>code_verifier</code> can be found here: <a href="https://tools.ietf.org/html/rfc7636#page-8">https://tools.ietf.org/html/rfc7636#page-8</a>.</p>
+
+<p>To initiate the authorization code flow direct the customer to an <code>/authorize</code> request.</p>
+<div class="highlight"><pre class="highlight plaintext"><code>https://auth.tesla.com/oauth2/v3/authorize?&amp;client_id=$CLIENT_ID&amp;locale=en-US&amp;prompt=login&amp;redirect_uri=$REDIRECT_URI&amp;response_type=code&amp;scope=openid%20vehicle_device_data%20offline_access&amp;state=$STATE&amp;code_challenge=$CODE_CHALLENGE
+</code></pre></div>
+<p><span class="endpoint">
+<code>https://auth.tesla.com/oauth2/v3/authorize</code>
+</span></p>
+
+<h3>
+Parameters
+</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>response_type</td>
+<td>Yes</td>
+<td>code</td>
+<td>A string, always use the value &quot;code&quot;.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Yes</td>
+<td>abc-123</td>
+<td>Partner application client ID.</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>Yes</td>
+<td>https://example.com/auth/callback</td>
+<td>Partner application callback url, spec: <a href="https://www.rfc-editor.org/rfc/rfc6749#section-3.1.2">rfc6749</a>.</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>Yes</td>
+<td>openid offline_access user_data vehicle_device_data vehicle_cmds vehicle_charging_cmds</td>
+<td>Space delimited list of <a href="#authorization-scopes">scopes</a>, include openid and offline_access to obtain a refresh token.</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Yes</td>
+<td>db4af3f87...</td>
+<td>Random value used for validation.</td>
+</tr>
+<tr>
+<td>code_challenge</td>
+<td>Yes</td>
+<td>bFoI-q1X6yH2-kBGEZ3gkv3JNd527d7ZWIw-KmIFm6I</td>
+<td>Randomly generated encrypted key from &quot;code_verifier&quot; that will be used for requesting a token.</td>
+</tr>
+<tr>
+<td>nonce</td>
+<td>No</td>
+<td>7baf90cda...</td>
+<td>Random value used for replay prevention.</td>
+</tr>
+</tbody></table>
+
+<p>2. Extract the <code>code</code> URL parameter from the callback.</p>
+
+<p>3. Execute a code exchange call to generate a token. Save the refresh_token to generate tokens in the future. The access_token can be used as the Bearer token in the Authorization header when making API requests. An <code>invalid_auth_code</code> response likely means the <code>code</code> is expired.</p>
+
+<p><span class="endpoint">
+<code>POST https://auth.tesla.com/oauth2/v3/token</code>
+</span></p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># Authorization code token request</span>
+<span class="nv">CODE</span><span class="o">=</span>&lt;extract from callback&gt;
+curl <span class="nt">--request</span> POST <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s1">'grant_type=authorization_code'</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"client_id=</span><span class="nv">$CLIENT_ID</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"code=</span><span class="nv">$CODE</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"audience=</span><span class="nv">$AUDIENCE</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"code_verifier=</span><span class="nv">$CODE_VERIFIER</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"redirect_uri=</span><span class="nv">$CALLBACK</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="s1">'https://auth.tesla.com/oauth2/v3/token'</span>
+<span class="c"># Extract access_token and refresh_token from this response</span>
+</code></pre></div>
+<h3>
+Parameters
+</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>grant_type</td>
+<td>Yes</td>
+<td>authorization_code</td>
+<td>Grant type must be authorization_code.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Yes</td>
+<td>abc-123</td>
+<td>Partner application client ID.</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Yes</td>
+<td>a90869e9d...</td>
+<td>Code from authorize request callback.</td>
+</tr>
+<tr>
+<td>audience</td>
+<td>Yes</td>
+<td>https://fleet-api.prd.na.vn.cloud.tesla.com</td>
+<td>Audience for generated token.</td>
+</tr>
+<tr>
+<td>code_verifier</td>
+<td>Yes</td>
+<td>S94sfZq9709HXnQlIYh9TOavL0GNd4z-h8FSwA9SLGY</td>
+<td>Randomly generated key (unchallenged/unencrypted) for the &quot;code_challenge&quot; that was sent to the authorize endpoint.</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>Yes</td>
+<td>https://example.com/auth/callback</td>
+<td>Partner application callback url, spec: <a href="https://www.rfc-editor.org/rfc/rfc6749#section-3.1.2">rfc6749</a>.</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>No</td>
+<td>openid offline_access user_data vehicle_device_data vehicle_cmds vehicle_charging_cmds</td>
+<td>Space-delimited list of <a href="#authorization-scopes">scopes</a>.</td>
+</tr>
+</tbody></table>
+
+<p>4. Use the refresh_token to generate new tokens and obtain refresh tokens.  There are two common failure modes for using a refresh_token that will return a 401 - login_required response: 1. The refresh token has already been used; only the newest refresh token is valid. 2. The user has reset their password.</p>
+<div class="highlight"><pre class="highlight sh tab-shell"><code><span class="c"># Refresh token request</span>
+<span class="nv">REFRESH_TOKEN</span><span class="o">=</span>&lt;extract from authorization code token request&gt;
+curl <span class="nt">--request</span> POST <span class="se">\</span>
+  <span class="nt">--header</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s1">'grant_type=refresh_token'</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"client_id=</span><span class="nv">$CLIENT_ID</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="nt">--data-urlencode</span> <span class="s2">"refresh_token=</span><span class="nv">$REFRESH_TOKEN</span><span class="s2">"</span> <span class="se">\</span>
+  <span class="s1">'https://auth.tesla.com/oauth2/v3/token'</span>
+</code></pre></div>
+<p><span class="endpoint">
+<code>POST https://auth.tesla.com/oauth2/v3/token</code>
+</span></p>
+
+<h3>
+Parameters
+</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Required</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>grant_type</td>
+<td>Yes</td>
+<td>refresh_token</td>
+<td>Grant type must be refresh_token.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Yes</td>
+<td>abc-123</td>
+<td>Partner application client ID.</td>
+</tr>
+<tr>
+<td>refresh_token</td>
+<td>Yes</td>
+<td>NA_a90869e9d...</td>
+<td>Refresh token from the code exchange response.</td>
+</tr>
+</tbody></table>
+
+<p>5. Similar to third-party tokens, once a user has granted scopes to an application, they can modify scopes or revoke access using the consent management page:</p>
 
 <p><span class="endpoint">
 <code>https://auth.tesla.com/user/revoke/consent?revoke_client_id=$CLIENT_ID&amp;back_url=$RETURN_URL</code>
@@ -13142,7 +13347,9 @@ Why are my refresh tokens suddenly invalid?
 <p>Refresh tokens are one-time-use and are valid for 3 months. When you perform a token exchange using a refresh token, ensure you save the new refresh token for use on the next exchange.</p>
 <h1 id='fleet-telemetry'>Fleet Telemetry</h1>
 <p>For high data fidelity use cases, as well as general efficiency (no additional battery usage or wake-ups required), vehicles can stream telemetry directly to a configured server. See account tier information at <a href="https://developer.tesla.com">https://developer.tesla.com</a>. Setup steps are available in the <a href="https://github.com/teslamotors/fleet-telemetry">fleet-telemetry Github repository</a>.</p>
-<h1 id='announcements-amp-api-changelog'>Announcements &amp; API Changelog</h1><h2 id='2024-05-20-application-scope-updates'>2024-05-20: Application scope updates</h2>
+<h1 id='announcements-amp-api-changelog'>Announcements &amp; API Changelog</h1><h2 id='2024-07-08-open-source-support'>2024-07-08: Open-source Support</h2>
+<p>Developers can now create open-source applications through <a href="https://developer.tesla.com">https://developer.tesla.com</a>, which enables application use without publishing secrets. Open-source applications are limited to the <a href="#membership-levels">discovery tier</a> and do not use a client secret for token creation.</p>
+<h2 id='2024-05-20-application-scope-updates'>2024-05-20: Application scope updates</h2>
 <p>Application scopes can now be updated on developer.tesla.com by clicking the API &amp; Scopes Manage link in the Credentials &amp; API section of an application. As described in #5 of the <a href="#third-party-token">third-party token</a>, users can update scopes and revoke access to applications using the update/revocation auth.tesla.com page.  Note: Application scope changes may take up to 10 minutes to become active.</p>
 <h2 id='2024-03-26-shutting-down-legacy-vehicle-api-endpoints'>2024-03-26: Shutting down Legacy vehicle API endpoints</h2>
 <p>Fleet API is Tesla&#39;s official 3rd party API and the only supported API for vehicle interactions. The list of available endpoints can be found at <a href="#endpoints-and-regional-requirements">Endpoints and Regional Requirements</a>. Starting April 2024, any vehicle APIs not part of this list will be phased out. Per the Fleet API policies, continued usage of unsupported APIs will result in the revocation of Fleet API access privileges.</p>
