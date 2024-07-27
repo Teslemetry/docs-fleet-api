@@ -342,6 +342,8 @@
           </li>
           <li class="tds-text--li tds-li"> <button class="tds-site-nav-item tds-animate--backdrop tds--highlighted"> <span
                 class="tds-site-nav-item-text">Fleet API</span> </button> </li>
+          <li class="tds-text--li tds-li"> <button class="tds-site-nav-item tds-animate--backdrop" onclick="window.location.href='/docs/charging/roaming';"> <span
+            class="tds-site-nav-item-text">Charging</span> </button> </li>
         </ol>
         <ol
           class="tds-ol tds-site-nav-items tds-align--end tds--hideon-tablet-landscape-only tds--hideon-tablet-portrait-only tds--hideon-phone-only">
@@ -373,6 +375,9 @@
             <li class="tds-text--li tds-li"> <button class="tds-site-nav-item tds--highlighted"> <span
                   class="tds-site-nav-item-text">Fleet API</span>
               </button>
+            </li>
+            <li class="tds-text--li tds-li"> <button class="tds-site-nav-item" onclick="window.location.href='/docs/charging/roaming';">
+              <span class="tds-site-nav-item-text">Charging</span> </button>
             </li>
           </ol>
         </section>
