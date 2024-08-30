@@ -134,7 +134,35 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/actuate_trunk</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/actuate_trunk</code></pre>
+<p><span class="padding-bottom">Controls the front (which_trunk: "front") or rear (which_trunk: "rear") trunk.</span></p>
+</div>
+<div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
+<h3 id="add-charge-schedule">add_charge_schedule</h3>
+<div style="display:flex"><a href="#add-charge-schedule"><button class="tds-icon-btn show-on-hover" type="button"><svg class="tds-icon tds-icon-link" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M22.013 12c0 2.757-2.243 5-5 5h-3.276a.75.75 0 0 1 0-1.5h3.276c1.93 0 3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5h-3.276a.75.75 0 0 1 0-1.5h3.276c2.757 0 5 2.243 5 5m-11.75 3.5H6.987c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5h3.276a.75.75 0 0 0 0-1.5H6.987c-2.757 0-5 2.243-5 5s2.243 5 5 5h3.276a.75.75 0 0 0 0-1.5M6.993 12c0 .414.336.75.75.75h8.5a.75.75 0 0 0 0-1.5h-8.5a.75.75 0 0 0-.75.75"></path>
+</svg></button></a><button class="tds-icon-btn" type="button"><svg class="tds-icon tds-icon-plus" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
+</svg></button></div>
+</div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/add_charge_schedule</code></pre>
+<p><span class="padding-bottom">Add a schedule for vehicle charging. To view existing schedules, call the <a class="tds-link" href="/docs/fleet-api/endpoints/vehicle-endpoints#vehicle-data" node="[object Object]">vehicle_data</a> endpoint and request <code>charge_schedule_data</code>.</span></p>
+<p><span class="padding-bottom">Related: <a class="tds-link" href="#remove-charge-schedule" node="[object Object]">remove charge schedule</a></span></p>
+</div>
+<div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
+<h3 id="add-precondition-schedule">add_precondition_schedule</h3>
+<div style="display:flex"><a href="#add-precondition-schedule"><button class="tds-icon-btn show-on-hover" type="button"><svg class="tds-icon tds-icon-link" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M22.013 12c0 2.757-2.243 5-5 5h-3.276a.75.75 0 0 1 0-1.5h3.276c1.93 0 3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5h-3.276a.75.75 0 0 1 0-1.5h3.276c2.757 0 5 2.243 5 5m-11.75 3.5H6.987c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5h3.276a.75.75 0 0 0 0-1.5H6.987c-2.757 0-5 2.243-5 5s2.243 5 5 5h3.276a.75.75 0 0 0 0-1.5M6.993 12c0 .414.336.75.75.75h8.5a.75.75 0 0 0 0-1.5h-8.5a.75.75 0 0 0-.75.75"></path>
+</svg></button></a><button class="tds-icon-btn" type="button"><svg class="tds-icon tds-icon-plus" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
+</svg></button></div>
+</div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/add_precondition_schedule</code></pre>
+<p><span class="padding-bottom">Add or modify a preconditioning schedule. To view existing schedules, call the <a class="tds-link" href="/docs/fleet-api/endpoints/vehicle-endpoints#vehicle-data" node="[object Object]">vehicle_data</a> endpoint and request <code>preconditioning_schedule_data</code>.</span></p>
+<p><span class="padding-bottom">Related: <a class="tds-link" href="#remove-precondition-schedule" node="[object Object]">remove precondition schedule</a></span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="adjust-volume">adjust_volume</h3>
@@ -144,7 +172,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/adjust_volume</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/adjust_volume</code></pre>
+<p><span class="padding-bottom">Adjusts vehicle media playback volume.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="auto-conditioning-start">auto_conditioning_start</h3>
@@ -154,7 +184,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/auto_conditioning_start</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/auto_conditioning_start</code></pre>
+<p><span class="padding-bottom">Starts climate preconditioning.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="auto-conditioning-stop">auto_conditioning_stop</h3>
@@ -164,7 +196,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/auto_conditioning_stop</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/auto_conditioning_stop</code></pre>
+<p><span class="padding-bottom">Stops climate preconditioning.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="cancel-software-update">cancel_software_update</h3>
@@ -174,7 +208,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/cancel_software_update</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/cancel_software_update</code></pre>
+<p><span class="padding-bottom">Cancels the countdown to install the vehicle software update. This operation will no longer work after the vehicle begins the software installation.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="charge-max-range">charge_max_range</h3>
@@ -184,7 +220,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_max_range</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_max_range</code></pre>
+<p><span class="padding-bottom">Charges in max range mode -- we recommend limiting the use of this mode to long trips.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="charge-port-door-close">charge_port_door_close</h3>
@@ -194,7 +232,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_port_door_close</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_port_door_close</code></pre>
+<p><span class="padding-bottom">Closes the charge port door.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="charge-port-door-open">charge_port_door_open</h3>
@@ -204,7 +244,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_port_door_open</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_port_door_open</code></pre>
+<p><span class="padding-bottom">Opens the charge port door.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="charge-standard">charge_standard</h3>
@@ -214,7 +256,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_standard</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_standard</code></pre>
+<p><span class="padding-bottom">Charges in Standard mode.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="charge-start">charge_start</h3>
@@ -224,7 +268,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_start</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_start</code></pre>
+<p><span class="padding-bottom">Starts charging the vehicle.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="charge-stop">charge_stop</h3>
@@ -234,7 +280,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_stop</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/charge_stop</code></pre>
+<p><span class="padding-bottom">Stops charging the vehicle.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="clear-pin-to-drive-admin">clear_pin_to_drive_admin</h3>
@@ -256,7 +304,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/door_lock</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/door_lock</code></pre>
+<p><span class="padding-bottom">Locks the vehicle.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="door-unlock">door_unlock</h3>
@@ -266,7 +316,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/door_unlock</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/door_unlock</code></pre>
+<p><span class="padding-bottom">Unlocks the vehicle.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="erase-user-data">erase_user_data</h3>
@@ -288,7 +340,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/flash_lights</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/flash_lights</code></pre>
+<p><span class="padding-bottom">Briefly flashes the vehicle headlights. Requires the vehicle to be in park.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="guest-mode">guest_mode</h3>
@@ -298,7 +352,41 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/guest_mode</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/guest_mode</code></pre>
+<ul class="tds-list tds-list--unordered" node="[object Object]">
+<li node="[object Object]"><span class="padding-bottom">Restricts certain vehicle UI functionality from guest users:</span>
+<ul class="tds-list tds-list--unordered" node="[object Object]">
+<li node="[object Object]"><span class="padding-bottom">PIN to Drive</span></li>
+<li node="[object Object]"><span class="padding-bottom">Speed Limit Mode</span></li>
+<li node="[object Object]"><span class="padding-bottom">Glovebox PIN</span></li>
+<li node="[object Object]"><span class="padding-bottom">Add/Remove keys</span></li>
+<li node="[object Object]"><span class="padding-bottom">Change vehicle name</span></li>
+</ul>
+</li>
+<li node="[object Object]"><span class="padding-bottom">Allows <a class="tds-link" href="#erase_user_data" node="[object Object]">erase_user_data</a> on the vehicle.</span></li>
+<li node="[object Object]"><span class="padding-bottom">Allows a user to set up Tesla mobile app access with the vehicle key card:</span></li>
+<ul class="tds-list tds-list--unordered" node="[object Object]">
+<li node="[object Object]"><span class="padding-bottom">If a user unlocks a vehicle or authenticates it for drive with a key card, they will receive a prompt to set up their phone as key by scanning a QR code on the vehicle touchscreen.</span></li>
+<ul class="tds-list tds-list--unordered" node="[object Object]">
+<li node="[object Object]"><span class="padding-bottom">The QR code is single-use and expires after 10 minutes.</span></li>
+<li node="[object Object]"><span class="padding-bottom">Requires vehicle firmware version 2024.14+.</span></li>
+</ul>
+<li node="[object Object]"><span class="padding-bottom">Any account that scans the QR code will gain Tesla app access to the vehicle, and download that account's Tesla profile to the vehicle.</span></li>
+<ul class="tds-list tds-list--unordered" node="[object Object]">
+<li node="[object Object]"><span class="padding-bottom">Tesla app access allows a user to view live vehicle location, issue remote commands, and set up their phone as key within Bluetooth proximity of the vehicle.</span></li>
+<li node="[object Object]"><span class="padding-bottom">Guest access will not have certain driver access features such as Service and Roadside.</span></li>
+</ul>
+<li node="[object Object]"><span class="padding-bottom">Guest access is automatically removed when:</span></li>
+<ul class="tds-list tds-list--unordered" node="[object Object]">
+<li node="[object Object]"><span class="padding-bottom">A key card is used to drive the vehicle.</span></li>
+<li node="[object Object]"><span class="padding-bottom">A new QR code is scanned (only one guest is allowed at a time).</span></li>
+<li node="[object Object]"><span class="padding-bottom">Guest Mode is disabled.</span></li>
+</ul>
+<li node="[object Object]"><span class="padding-bottom">In addition, one can use the <a class="tds-link" href="#drivers-remove" node="[object Object]">drivers remove</a> endpoint to remotely revoke guest access.</span></li>
+<li node="[object Object]"><span class="padding-bottom">If a user does not have the app installed, they will see this webpage (<a class="tds-link external-link" href="https://www.tesla.com/_gs/test" target="_blank" rel="nofollow noopener" title="Follow link" node="[object Object]">https://www.tesla.com/_gs/test</a>) to guide them through the process.</span></li>
+</ul>
+</ul>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="honk-horn">honk_horn</h3>
@@ -308,7 +396,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/honk_horn</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/honk_horn</code></pre>
+<p><span class="padding-bottom">Honks the vehicle horn. Requires the vehicle to be in park.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="media-next-fav">media_next_fav</h3>
@@ -426,7 +516,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_auto_seat_climate_request</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_auto_seat_climate_request</code></pre>
+<p><span class="padding-bottom">Sets automatic seat heating and cooling.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="remote-auto-steering-wheel-heat-climate-request">remote_auto_steering_wheel_heat_climate_request</h3>
@@ -469,7 +561,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_seat_cooler_request</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_seat_cooler_request</code></pre>
+<p><span class="padding-bottom">Sets seat cooling.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="remote-seat-heater-request">remote_seat_heater_request</h3>
@@ -479,7 +573,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_seat_heater_request</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_seat_heater_request</code></pre>
+<p><span class="padding-bottom">Sets seat heating.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="remote-start-drive">remote_start_drive</h3>
@@ -489,7 +585,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_start_drive</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_start_drive</code></pre>
+<p><span class="padding-bottom">Starts the vehicle remotely. Requires keyless driving to be enabled.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="remote-steering-wheel-heat-level-request">remote_steering_wheel_heat_level_request</h3>
@@ -499,7 +597,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_steering_wheel_heat_level_request</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_steering_wheel_heat_level_request</code></pre>
+<p><span class="padding-bottom">Sets steering wheel heat level.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="remote-steering-wheel-heater-request">remote_steering_wheel_heater_request</h3>
@@ -509,7 +609,35 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_steering_wheel_heater_request</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remote_steering_wheel_heater_request</code></pre>
+<p><span class="padding-bottom">Sets steering wheel heating on/off. For vehicles that do not support auto steering wheel heat.</span></p>
+</div>
+<div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
+<h3 id="remove-charge-schedule">remove_charge_schedule</h3>
+<div style="display:flex"><a href="#remove-charge-schedule"><button class="tds-icon-btn show-on-hover" type="button"><svg class="tds-icon tds-icon-link" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M22.013 12c0 2.757-2.243 5-5 5h-3.276a.75.75 0 0 1 0-1.5h3.276c1.93 0 3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5h-3.276a.75.75 0 0 1 0-1.5h3.276c2.757 0 5 2.243 5 5m-11.75 3.5H6.987c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5h3.276a.75.75 0 0 0 0-1.5H6.987c-2.757 0-5 2.243-5 5s2.243 5 5 5h3.276a.75.75 0 0 0 0-1.5M6.993 12c0 .414.336.75.75.75h8.5a.75.75 0 0 0 0-1.5h-8.5a.75.75 0 0 0-.75.75"></path>
+</svg></button></a><button class="tds-icon-btn" type="button"><svg class="tds-icon tds-icon-plus" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
+</svg></button></div>
+</div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remove_charge_schedule</code></pre>
+<p><span class="padding-bottom">Remove a charge schedule by ID. To view existing schedules, call the <a class="tds-link" href="/docs/fleet-api/endpoints/vehicle-endpoints#vehicle-data" node="[object Object]">vehicle_data</a> endpoint and request <code>charge_schedule_data</code>.</span></p>
+<p><span class="padding-bottom">Related: <a class="tds-link" href="#add-charge-schedule" node="[object Object]">add charge schedule</a></span></p>
+</div>
+<div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
+<h3 id="remove-precondition-schedule">remove_precondition_schedule</h3>
+<div style="display:flex"><a href="#remove-precondition-schedule"><button class="tds-icon-btn show-on-hover" type="button"><svg class="tds-icon tds-icon-link" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M22.013 12c0 2.757-2.243 5-5 5h-3.276a.75.75 0 0 1 0-1.5h3.276c1.93 0 3.5-1.57 3.5-3.5s-1.57-3.5-3.5-3.5h-3.276a.75.75 0 0 1 0-1.5h3.276c2.757 0 5 2.243 5 5m-11.75 3.5H6.987c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5h3.276a.75.75 0 0 0 0-1.5H6.987c-2.757 0-5 2.243-5 5s2.243 5 5 5h3.276a.75.75 0 0 0 0-1.5M6.993 12c0 .414.336.75.75.75h8.5a.75.75 0 0 0 0-1.5h-8.5a.75.75 0 0 0-.75.75"></path>
+</svg></button></a><button class="tds-icon-btn" type="button"><svg class="tds-icon tds-icon-plus" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
+</svg></button></div>
+</div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/remove_precondition_schedule</code></pre>
+<p><span class="padding-bottom">Remove a precondition schedule by ID. To view existing schedules, call the <a class="tds-link" href="/docs/fleet-api/endpoints/vehicle-endpoints#vehicle-data" node="[object Object]">vehicle_data</a> endpoint and request <code>preconditioning_schedule_data</code>.</span></p>
+<p><span class="padding-bottom">Related: <a class="tds-link" href="#add-precondition-schedule" node="[object Object]">add precondition schedule</a></span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="reset-pin-to-drive-pin">reset_pin_to_drive_pin</h3>
@@ -519,7 +647,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/reset_pin_to_drive_pin</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/reset_pin_to_drive_pin</code></pre>
+<p><span class="padding-bottom">Removes PIN to Drive. Requires the car to be in Pin to Drive mode and not in Valet mode. Note that this only works if PIN to Drive is not active. This command is only accessible to fleet managers or owners. This command also requires the Tesla Vehicle Command Protocol - for more information, refer to the documentation <a class="tds-link" href="/docs/fleet-api/support/announcements#2023-10-09-rest-api-vehicle-commands-endpoint-deprecation-warning" node="[object Object]">here</a>.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="reset-valet-pin">reset_valet_pin</h3>
@@ -529,7 +659,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/reset_valet_pin</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/reset_valet_pin</code></pre>
+<p><span class="padding-bottom">Removes PIN for Valet Mode. To use this command, valet mode must be disabled. See <a class="tds-link" href="/docs/fleet-api/endpoints/vehicle-commands#set-valet-mode" node="[object Object]">set_valet_mode</a>.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="schedule-software-update">schedule_software_update</h3>
@@ -539,7 +671,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/schedule_software_update</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/schedule_software_update</code></pre>
+<p><span class="padding-bottom">Schedules a vehicle software update (over the air "OTA") to be installed in the future.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-bioweapon-mode">set_bioweapon_mode</h3>
@@ -549,7 +683,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_bioweapon_mode</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_bioweapon_mode</code></pre>
+<p><span class="padding-bottom">Turns Bioweapon Defense Mode on and off.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-cabin-overheat-protection">set_cabin_overheat_protection</h3>
@@ -559,7 +695,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_cabin_overheat_protection</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_cabin_overheat_protection</code></pre>
+<p><span class="padding-bottom">Sets the vehicle overheat protection.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-charge-limit">set_charge_limit</h3>
@@ -569,7 +707,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_charge_limit</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_charge_limit</code></pre>
+<p><span class="padding-bottom">Sets the vehicle charge limit.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-charging-amps">set_charging_amps</h3>
@@ -579,7 +719,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_charging_amps</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_charging_amps</code></pre>
+<p><span class="padding-bottom">Sets the vehicle charging amps.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-climate-keeper-mode">set_climate_keeper_mode</h3>
@@ -589,7 +731,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_climate_keeper_mode</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_climate_keeper_mode</code></pre>
+<p><span class="padding-bottom">Enables climate keeper mode. Accepted values are: <code>0</code>,<code>1</code>,<code>2</code>,<code>3</code>. Mapping to respectively Off, Keep Mode, Dog Mode, Camp Mode.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-cop-temp">set_cop_temp</h3>
@@ -599,7 +743,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_cop_temp</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_cop_temp</code></pre>
+<p><span class="padding-bottom">Adjusts the Cabin Overheat Protection temperature (COP). This command will not activate COP. The precise target temperature depends on if the user has selected C or F. Accepted values are: <code>0</code>,<code>1</code>,<code>2</code>. Mapping to respectively Low (90F/30C), Medium (95F/35C), High (100F/40C).</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-pin-to-drive">set_pin_to_drive</h3>
@@ -609,7 +755,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_pin_to_drive</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_pin_to_drive</code></pre>
+<p><span class="padding-bottom">Sets a four-digit passcode for PIN to Drive. This PIN must then be entered before the vehicle can be driven. Once a PIN is set, the vehicle remembers its value even when PIN to Drive is disabled and it will discard any new PIN provided using this method. To change an existing PIN, first call reset_pin_to_drive_pin. This command is only accessible to fleet managers or owners. This command also requires the Tesla Vehicle Command Protocol - for more information, refer to the documentation <a class="tds-link" href="/docs/fleet-api/support/announcements#2023-10-09-rest-api-vehicle-commands-endpoint-deprecation-warning" node="[object Object]">here</a>.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-preconditioning-max">set_preconditioning_max</h3>
@@ -619,7 +767,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_preconditioning_max</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_preconditioning_max</code></pre>
+<p><span class="padding-bottom">Sets an override for preconditioning — it should default to empty if no override is used.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-scheduled-charging">set_scheduled_charging</h3>
@@ -629,7 +779,10 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_scheduled_charging</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_scheduled_charging</code></pre>
+<p><span class="padding-bottom">This endpoint is not recommended beginning with firmware version 2024.26. The <a class="tds-link" href="#add-charge-schedule" node="[object Object]">add charge schedule</a> command should be used instead.</span></p>
+<p><span class="padding-bottom">Sets a time at which charging should be completed. The <code>time</code> parameter is minutes after midnight (e.g: time=120 schedules charging for 2:00am vehicle local time).</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-scheduled-departure">set_scheduled_departure</h3>
@@ -639,7 +792,10 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_scheduled_departure</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_scheduled_departure</code></pre>
+<p><span class="padding-bottom">This endpoint is not recommended beginning with firmware version 2024.26. The <a class="tds-link" href="#add-precondition-schedule" node="[object Object]">add precondition schedule</a> command should be used instead.</span></p>
+<p><span class="padding-bottom">Sets a time at which departure should be completed. The <code>departure_time</code> and <code>end_off_peak_time</code> parameters are minutes after midnight (e.g: departure_time=120 schedules departure for 2:00am vehicle local time).</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-sentry-mode">set_sentry_mode</h3>
@@ -649,7 +805,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_sentry_mode</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_sentry_mode</code></pre>
+<p><span class="padding-bottom">Enables and disables Sentry Mode. Sentry Mode allows customers to watch the vehicle cameras live from the mobile app, as well as record sentry events.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-temps">set_temps</h3>
@@ -659,7 +817,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_temps</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_temps</code></pre>
+<p><span class="padding-bottom">Sets the driver and/or passenger-side cabin temperature (and other zones if sync is enabled).</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-valet-mode">set_valet_mode</h3>
@@ -669,7 +829,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_valet_mode</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_valet_mode</code></pre>
+<p><span class="padding-bottom">Turns on Valet Mode and sets a four-digit passcode that must then be entered to disable Valet Mode.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="set-vehicle-name">set_vehicle_name</h3>
@@ -679,7 +841,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_vehicle_name</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/set_vehicle_name</code></pre>
+<p><span class="padding-bottom">Changes the name of a vehicle. This command also requires the Tesla Vehicle Command Protocol - for more information, refer to the documentation <a class="tds-link" href="/docs/fleet-api/support/announcements#2023-10-09-rest-api-vehicle-commands-endpoint-deprecation-warning" node="[object Object]">here</a>.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="speed-limit-activate">speed_limit_activate</h3>
@@ -689,7 +853,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_activate</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_activate</code></pre>
+<p><span class="padding-bottom">Activates Speed Limit Mode with a four-digit PIN.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="speed-limit-clear-pin">speed_limit_clear_pin</h3>
@@ -699,7 +865,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_clear_pin</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_clear_pin</code></pre>
+<p><span class="padding-bottom">Deactivates Speed Limit Mode and resets the associated PIN.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="speed-limit-clear-pin-admin">speed_limit_clear_pin_admin</h3>
@@ -721,7 +889,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_deactivate</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_deactivate</code></pre>
+<p><span class="padding-bottom">Deactivates Speed Limit Mode.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="speed-limit-set-limit">speed_limit_set_limit</h3>
@@ -731,7 +901,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_set_limit</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/speed_limit_set_limit</code></pre>
+<p><span class="padding-bottom">Sets the maximum speed (in miles per hours) for Speed Limit Mode.</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="sun-roof-control">sun_roof_control</h3>
@@ -754,7 +926,9 @@
 <path fill="currentColor" d="M20 12a.75.75 0 0 1-.75.75h-6.5v6.5a.75.75 0 0 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5A.75.75 0 0 1 20 12"></path>
 </svg></button></div>
 </div>
-<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/trigger_homelink</code></pre></div>
+<pre><code>POST /api/1/vehicles/{vehicle_tag}/command/trigger_homelink</code></pre>
+<p><span class="padding-bottom">Turns on HomeLink (used to open and close garage doors).</span></p>
+</div>
 <div>
 <div style="display:flex;justify-content:space-between;align-items:flex-end" class="show-on-hover-wrapper">
 <h3 id="upcoming-calendar-entries">upcoming_calendar_entries</h3>
@@ -859,6 +1033,8 @@
 <div class="tds-sidenav-group tds-sidenav-group--always-expanded">
 <ol class="tds-site-nav-items tds-site-nav-items--vertical">
 <li><a href="#actuate-trunk" class="tds-site-nav-item">actuate_trunk</a></li>
+<li><a href="#add-charge-schedule" class="tds-site-nav-item">add_charge_schedule</a></li>
+<li><a href="#add-precondition-schedule" class="tds-site-nav-item">add_precondition_schedule</a></li>
 <li><a href="#adjust-volume" class="tds-site-nav-item">adjust_volume</a></li>
 <li><a href="#auto-conditioning-start" class="tds-site-nav-item">auto_conditioning_start</a></li>
 <li><a href="#auto-conditioning-stop" class="tds-site-nav-item">auto_conditioning_stop</a></li>
@@ -893,6 +1069,8 @@
 <li><a href="#remote-start-drive" class="tds-site-nav-item">remote_start_drive</a></li>
 <li><a href="#remote-steering-wheel-heat-level-request" class="tds-site-nav-item">remote_steering_wheel_heat_level_request</a></li>
 <li><a href="#remote-steering-wheel-heater-request" class="tds-site-nav-item">remote_steering_wheel_heater_request</a></li>
+<li><a href="#remove-charge-schedule" class="tds-site-nav-item">remove_charge_schedule</a></li>
+<li><a href="#remove-precondition-schedule" class="tds-site-nav-item">remove_precondition_schedule</a></li>
 <li><a href="#reset-pin-to-drive-pin" class="tds-site-nav-item">reset_pin_to_drive_pin</a></li>
 <li><a href="#reset-valet-pin" class="tds-site-nav-item">reset_valet_pin</a></li>
 <li><a href="#schedule-software-update" class="tds-site-nav-item">schedule_software_update</a></li>
@@ -943,12 +1121,12 @@
 window.pagePath="/fleet-api/endpoints/vehicle-commands"
 </script>
 <script id="gatsby-chunk-mapping">
-window.___chunkMapping='{"app":["/app-e5cff9082c00ddacd9a4.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-96c3cb6ce7cc17de9c7d.js"],"component---src-pages-charging-public-key-infrastructure-tsx":["/component---src-pages-charging-public-key-infrastructure-tsx-0eb0bc45160ed3c90ed9.js"],"component---src-pages-fleet-api-index-tsx":["/component---src-pages-fleet-api-index-tsx-f220d7978b2855bae58f.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-56f83cc043d34363de65.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-index-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-index-mdx-2e2f36ece28a69fc49e7.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-open-source-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-open-source-mdx-9e800adb357e7931f01e.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-overview-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-overview-mdx-7683309c4d2bcd642e39.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-partner-tokens-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-partner-tokens-mdx-ec1c9cfa7558107a7372.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-third-party-tokens-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-third-party-tokens-mdx-29cdb0c7e410a1885a38.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-charging-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-charging-endpoints-mdx-ddecb15c9a4dfb2cf2af.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-energy-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-energy-endpoints-mdx-0e67bf64e3506ea17a04.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-partner-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-partner-endpoints-mdx-7f420269fbe1a2f635e3.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-user-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-user-endpoints-mdx-ff90cab50ce903bb8ecc.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-command-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-command-mdx-ca34a49d8e28f5369104.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-endpoints-mdx-9b6dcfeddd4e2f14084c.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-fleet-telemetry-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-fleet-telemetry-mdx-764b3cd5bc94b8349dde.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-base-urls-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-base-urls-mdx-025fdfd897d5d44c7208.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-best-practices-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-best-practices-mdx-3866227c3f5a3408e848.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-conventions-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-conventions-mdx-416f69dbf1ba37f93242.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-legal-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-legal-mdx-53f969a3899779bbe6d8.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-subscription-plans-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-subscription-plans-mdx-2a9a9c01b0aa2aedabc6.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-what-is-fleet-api-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-what-is-fleet-api-mdx-a0f506c089c20f75f6c2.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-announcements-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-announcements-mdx-b369e61a9ebd1180f3b6.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-contact-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-contact-mdx-dbc5461bc1198dc92752.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-faq-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-faq-mdx-dce1d85bb485d5ba5d3b.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-index-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-index-mdx-d4baa284a79c7a867562.js"]}'
+window.___chunkMapping='{"app":["/app-e5cff9082c00ddacd9a4.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-96c3cb6ce7cc17de9c7d.js"],"component---src-pages-charging-public-key-infrastructure-tsx":["/component---src-pages-charging-public-key-infrastructure-tsx-0eb0bc45160ed3c90ed9.js"],"component---src-pages-fleet-api-index-tsx":["/component---src-pages-fleet-api-index-tsx-f220d7978b2855bae58f.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-56f83cc043d34363de65.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-index-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-index-mdx-2e2f36ece28a69fc49e7.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-open-source-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-open-source-mdx-9e800adb357e7931f01e.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-overview-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-overview-mdx-7683309c4d2bcd642e39.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-partner-tokens-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-partner-tokens-mdx-ec1c9cfa7558107a7372.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-third-party-tokens-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-authentication-third-party-tokens-mdx-29cdb0c7e410a1885a38.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-charging-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-charging-endpoints-mdx-ddecb15c9a4dfb2cf2af.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-energy-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-energy-endpoints-mdx-0e67bf64e3506ea17a04.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-partner-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-partner-endpoints-mdx-7f420269fbe1a2f635e3.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-user-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-user-endpoints-mdx-ff90cab50ce903bb8ecc.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-command-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-command-mdx-ca34a49d8e28f5369104.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-endpoints-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-endpoints-vehicle-endpoints-mdx-9b6dcfeddd4e2f14084c.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-fleet-telemetry-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-fleet-telemetry-mdx-764b3cd5bc94b8349dde.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-base-urls-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-base-urls-mdx-025fdfd897d5d44c7208.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-best-practices-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-best-practices-mdx-3866227c3f5a3408e848.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-conventions-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-conventions-mdx-416f69dbf1ba37f93242.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-legal-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-legal-mdx-53f969a3899779bbe6d8.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-subscription-plans-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-subscription-plans-mdx-2a9a9c01b0aa2aedabc6.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-what-is-fleet-api-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-getting-started-what-is-fleet-api-mdx-a0f506c089c20f75f6c2.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-announcements-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-announcements-mdx-4ec5e769fee1ba4fad46.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-contact-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-contact-mdx-dbc5461bc1198dc92752.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-faq-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-faq-mdx-dce1d85bb485d5ba5d3b.js"],"component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-index-mdx":["/component---src-templates-generic-page-tsx-content-file-path-content-docs-en-support-index-mdx-d4baa284a79c7a867562.js"]}'
 </script>
 <script>
-window.___webpackCompilationHash="3eafa5ef78b2899b4f3c"
+window.___webpackCompilationHash="eba130affedddc6fa006"
 </script>
-<script src="/docs/webpack-runtime-ef944136901f69746990.js" async></script>
+<script src="/docs/webpack-runtime-1ac22e5f721bf07dad2c.js" async></script>
 <script src="/docs/framework-6f9cb054dc04931f7070.js" async></script>
 <script src="/docs/app-e5cff9082c00ddacd9a4.js" async></script>
 </body>
